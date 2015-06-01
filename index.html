@@ -4,21 +4,6 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Principles</h1>
-  <ul class="post-list">
-    {% for post in site.posts %}
-      {% if post.tags contains 'principle' %}
-        <li>
-          <h2>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </h2>
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-
-  <hr/>
-
   <h1 class="page-heading">Posts</h1>
 
   <ul class="post-list">
