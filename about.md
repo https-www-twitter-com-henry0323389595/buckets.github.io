@@ -4,8 +4,6 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Buckets is a dead-simple budgeting app for families and single people.  And it's fun!  Check it out at [www.bucketsisbetter.com](https://www.bucketsisbetter.com).
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+This companion blog contains helpful tips for budgeting that you can use with Buckets or with most other budgeting tools.
