@@ -243,3 +243,17 @@ hr {
         }
     }
 }
+
+
+table.form {
+    border-collapse: collapse;
+    td,th {
+        border: 1px solid $grey-color;
+        padding: 1rem;
+        vertical-align: middle;
+        text-align: center;
+    }
+}
+table.full-width {
+    width: 100%;
+}

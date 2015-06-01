@@ -8,3 +8,6 @@ url: "https://blog.bucketsisbetter.com"
 
 # Build settings
 markdown: kramdown
+
+gems:
+  - jemoji
