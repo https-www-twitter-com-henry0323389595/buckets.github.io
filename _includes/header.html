@@ -1,8 +1,35 @@
 <header class="site-header">
+  <style>
+  .hero {
+    background-color: #2eaef1;
+    padding: 2rem 0 5rem;
+    text-align: center;
+    color: white;
+  }
+  .hero img {
+    width: 18rem;
+  }
+  .hero.mini {
+    padding: 1rem;
+  }
+  .hero.mini img {
+    width: 6rem;
+  }
+  .hero a {
+    color: white;
+    font-size: 2rem;
+  }
+  .site-nav {
+    text-align: center;
+  }
+  </style>
+  <div class="hero mini">
+    <div class="wrapper">
+      <a href="/"><img src="/img/wordlesslogo.png" border="0"/> Buckets Budgeting Blog</a>
+    </div>
+  </div>
 
   <div class="wrapper">
-
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -19,7 +46,7 @@
           <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
           {% endif %}
         {% endfor %}
-        <a class="page-link" href="https://www.bucketsisbetter.com">Buckets</a>
+        <a class="page-link" href="https://www.bucketsisbetter.com">Buckets Main Site</a>
       </div>
     </nav>
 
