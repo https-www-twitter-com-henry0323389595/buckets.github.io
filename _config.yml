@@ -1,10 +1,10 @@
 # Site settings
 title: Buckets Blog
-email: hello@bucketsisbetter.com
+email: hello@budgetwithbuckets.com
 description: >
   A blog about budgeting well.
 baseurl: ""
-url: "https://blog.bucketsisbetter.com"
+url: "https://blog.budgetwithbuckets.com"
 
 # Build settings
 markdown: kramdown
