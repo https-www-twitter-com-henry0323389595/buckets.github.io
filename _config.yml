@@ -8,6 +8,7 @@ url: "https://blog.budgetwithbuckets.com"
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 
 gems:
   - jemoji

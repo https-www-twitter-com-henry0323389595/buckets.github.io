@@ -128,20 +128,22 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #eef;
 }
 
 code {
     padding: 1px 5px;
+    background-color: #34495e;
+    color: white;
 }
 
 pre {
+    color: white;
     padding: 8px 12px;
-    overflow-x: scroll;
+    overflow-x: auto;
 
     > code {
+        background-color: inherit;
         border: 0;
         padding-right: 0;
         padding-left: 0;
