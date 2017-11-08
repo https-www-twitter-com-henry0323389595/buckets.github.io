@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 hr {
     height: 1px;
     border: 1px solid $grey-color-light;
@@ -184,6 +187,7 @@ hr {
     > li {
         display: flex;
         align-items: baseline;
+        flex-wrap: wrap;
     }
 }
 
@@ -194,7 +198,7 @@ hr {
 }
 
 .post-list .post-meta {
-    flex-basis: 30%;
+    flex-basis: 10rem;
     flex-grow: 0;
     flex-shrink: 0;
     text-align: right;
@@ -202,7 +206,7 @@ hr {
 }
 
 .post-link {
-    flex-basis: 50%;
+    flex-basis: 70%;
     flex-grow: 0;
     flex-shrink: 0;
 
@@ -212,6 +216,15 @@ hr {
     padding-left: 1rem;
     border-left: 1px solid $grey-color-light;
     padding-bottom: 1rem;
+}
+
+.post-excerpt {
+    flex-grow: 1;
+    margin-left: 10rem;
+    padding-left: 1rem;
+    border-left: 1px solid $grey-color-light;
+    color: $text-color !important;
+    text-decoration: none !important;
 }
 
 
