@@ -31,7 +31,7 @@ layout: default
   <div class="comment-form">
     <h3>Add comment</h3>
     <form method="POST" action="https://api.staticman.net/v2/entry/buckets/buckets.github.io/master/comments">
-      <input name="options[redirect]" type="hidden" value="{{ site.baseurl }}{{ page.url }}">
+      <input name="options[redirect]" type="hidden" value="{{ site.url }}{{ page.url }}">
       <input name="options[slug]" type="hidden" value="{{ page.slug }}">
 
       <div>
