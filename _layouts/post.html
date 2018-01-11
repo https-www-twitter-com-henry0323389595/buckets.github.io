@@ -13,10 +13,11 @@ layout: default
   </article>
 
 
+  {% assign comments = site.data.comments[page.slug] %}
+  {% if comments.length %}
   <h2>Comments</h2>
 
   <div class="comments">
-  {% assign comments = site.data.comments[page.slug] %}
   {% for comment in comments %}
     {% assign email = comment[1].email %}
     {% assign name = comment[1].name %}
@@ -25,6 +26,7 @@ layout: default
     {% include comment.html index=forloop.index email=email name=name date=date message=message %}
   {% endfor %}
   </div>
+  {% endif %}
 
   <div class="comment-form">
     <h3>Add comment</h3>
