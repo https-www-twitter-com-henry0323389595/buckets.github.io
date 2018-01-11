@@ -129,6 +129,7 @@ pre,
 code {
     font-size: 15px;
     border-radius: 3px;
+    font-family: monospace;
 }
 
 code {
@@ -139,9 +140,14 @@ code {
 }
 
 pre {
+    font-family: monospace !important;
     color: white;
     padding: 8px 12px;
     overflow-x: auto;
+
+    * {
+        font-family: monospace !important;
+    }
 
     > code {
         background-color: inherit;
