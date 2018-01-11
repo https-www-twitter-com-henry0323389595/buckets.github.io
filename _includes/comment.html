@@ -1,0 +1,10 @@
+<div class="comment">
+  <img src="https://www.gravatar.com/avatar/{{email}}?s=64">
+  <div>
+    <div class="details">
+      <div class="author">{{ name | xml_escape}}</div>
+      <div class="date">{{ date | date: '%a %b %d, %Y %H:%M' }}</div>
+    </div>
+    <div class="message">{{ message | xml_escape}}</div>
+  </div>
+</div>

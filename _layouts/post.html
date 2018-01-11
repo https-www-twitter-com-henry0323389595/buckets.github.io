@@ -12,4 +12,43 @@ layout: default
     {{ content }}
   </article>
 
+
+  <h2>Comments</h2>
+
+  <div class="comments">
+  {% assign comments = site.data.comments[page.slug] %}
+  {% for comment in comments %}
+    {% assign email = comment[1].email %}
+    {% assign name = comment[1].name %}
+    {% assign date = comment[1].date %}
+    {% assign message = comment[1].message %}
+    {% include comment.html index=forloop.index email=email name=name date=date message=message %}
+  {% endfor %}
+  </div>
+
+  <div class="comment-form">
+    <h3>Add comment</h3>
+    <form method="POST" action="https://api.staticman.net/v2/entry/buckets/buckets.github.io/master/comments">
+      <input name="options[redirect]" type="hidden" value="{{ site.baseurl }}{{ page.url }}">
+      <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+
+      <div>
+        <label>Name:<br/><input name="fields[name]" type="text"></label>
+      </div>
+      <div>
+        <label>Email:<br/><input name="fields[email]" type="email"></label>
+      </div>
+      <div>
+        <label>Message:</label>
+        <div>
+          <textarea name="fields[message]"></textarea>
+        </div>
+      </div>
+
+      <div>
+        <button type="submit">Add comment</button>
+      </div>
+        
+    </form>
+  </div>
 </div>

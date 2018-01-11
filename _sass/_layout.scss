@@ -289,3 +289,55 @@ table.form {
 table.full-width {
     width: 100%;
 }
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    border-bottom: 1px solid rgba(189, 195, 199,1.0);
+    &:first-child {
+        padding-top: 0;
+    }
+    img {
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1rem;
+        border-radius: 6px;
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+    .details {
+        flex-shrink: 0;
+        flex-grow: 0;
+        display: flex;
+        .date {
+            color: rgba(189, 195, 199,1.0);
+            font-size: .9rem;
+            margin-left: .5rem;
+        }
+        .author {
+            color: rgba(52, 73, 94,1.0);
+            font-size: .9rem;
+        }
+    }
+    .message {
+        white-space: pre-wrap;
+    }
+
+}
+.comment-form {
+    padding-left: 4rem;
+    margin-top: 2rem;
+    input {
+        width: 10rem;
+        border: 1px solid rgba(189, 195, 199,1.0);
+    }
+    textarea {
+        width: 100%;
+        font-size: 1rem;
+        padding: .5rem;
+        min-height: 6rem;
+        border: 1px solid rgba(189, 195, 199,1.0);
+    }
+}
