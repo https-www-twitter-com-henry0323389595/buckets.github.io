@@ -29,9 +29,15 @@ layout: default
   {% endif %}
 
   <div class="comment-form">
+    <a name="comment-form"></a>
+    <script>
+      if (window.location.search.substr(1).indexOf('comment=submitted') !== -1) {
+        document.write(`<div class="notification">Comment submitted!  Your comment will be posted here after being reviewed.</div>`);
+      }
+    </script>
     <h3>Add comment</h3>
     <form method="POST" action="https://api.staticman.net/v2/entry/buckets/buckets.github.io/master/comments">
-      <input name="options[redirect]" type="hidden" value="{{ site.url }}{{ page.url }}">
+      <input name="options[redirect]" type="hidden" value="{{ site.url }}{{ page.url }}?comment=submitted#comment-form">
       <input name="options[slug]" type="hidden" value="{{ page.slug }}">
 
       <div>
