@@ -346,3 +346,15 @@ table.full-width {
         background-color: rgba(52, 152, 219, 0.3);
     }
 }
+figure {
+    text-align: center;
+    img {
+        margin: 0 auto;
+        border: 1px solid rgba(149, 165, 166,1.0);
+        border-radius: 4px;
+        box-shadow: 1px 1px 14px rgba(0,0,0,0.15);
+    }
+    figcaption {
+
+    }
+}
