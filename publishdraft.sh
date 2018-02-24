@@ -8,3 +8,5 @@ fi
 
 POST_NAME="_posts/$(date +'%Y-%m-%d')-$(basename ${FILENAME}).md"
 echo "POST_NAME" $POST_NAME
+
+mv "$FILENAME" "$POST_NAME"
