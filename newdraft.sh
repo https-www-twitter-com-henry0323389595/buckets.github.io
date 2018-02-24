@@ -6,8 +6,8 @@ if [ -z "$NAME" ]; then
     exit 1
 fi
 
-FULLNAME="$(date +%Y-%m-%d)-${NAME}.md"
+FULLNAME="${NAME}.md"
 
-cp _posts/_blank.md _posts/$FULLNAME
+cp _drafts/_blank.md _drafts/$FULLNAME
 
-subl _posts/$FULLNAME
+subl _drafts/$FULLNAME
