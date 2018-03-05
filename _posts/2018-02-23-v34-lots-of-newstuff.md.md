@@ -9,7 +9,7 @@ excerpt_separator: <!--more-->
 In the last month, Buckets has become even better at helping you manage your money well.  Here's a highlight of the best new features and fixes.
 
 <div style="text-align: center;">
-<img src="/img/v0.34/bucketsview.png" alt="New look for Buckets" />
+<img src="{{ site.url }}/img/v0.34/bucketsview.png" alt="New look for Buckets" />
 </div>
 
 <!--more-->
@@ -38,7 +38,7 @@ Sometimes we overspend on eating out.  And by *sometimes* I mean *pretty much ev
 
 <div style="text-align: center;">
 <figure>
-<img src="/img/v0.34/quickzero.gif" alt="Quick zero" style="max-width: 400px;" />
+<img src="{{ site.url }}/img/v0.34/quickzero.gif" alt="Quick zero" style="max-width: 400px;" />
 </figure>
 </div>
 
@@ -67,7 +67,7 @@ When you're filling out the In/Out of each bucket, now there's helpful sums disp
 
 <div style="text-align: center;">
 <figure>
-<img src="/img/v0.34/multimath.png" alt="Math for multiple transactions" style="max-width: 400px;" />
+<img src="{{ site.url }}/img/v0.34/multimath.png" alt="Math for multiple transactions" style="max-width: 400px;" />
 <figcaption>I'm about to put $12 in and take $24 out.</figcaption>
 </figure>
 </div>
@@ -92,7 +92,7 @@ You've probably already noticed this change, but now there's more information sh
 - Bucket's want (per month)
 
 <div style="text-align: center;">
-<img src="/img/v0.34/bucketsview.png" alt="New look for Buckets" />
+<img src="{{ site.url }}/img/v0.34/bucketsview.png" alt="New look for Buckets" />
 </div>
 
 I have more changes planned to make it simpler while still giving you plenty of information at a glance.  Stay tuned!
@@ -106,7 +106,7 @@ You can now send bug reports from within Buckets (without having to write me an 
 
 <div style="text-align: center;">
 <figure>
-<img src="/img/v0.34/reportbug.png" alt="Report bug" style="max-width: 400px;" />
+<img src="{{ site.url }}/img/v0.34/reportbug.png" alt="Report bug" style="max-width: 400px;" />
 </figure>
 </div>
 

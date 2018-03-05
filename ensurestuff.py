@@ -12,16 +12,7 @@ for post in posts:
     fpath = os.path.join('_posts', post)
     with open(fpath, 'rb') as fh:
         for i,line in enumerate(fh):
-            if line.startswith('image:'):
-                # header image
-                if not line.count('site.url'):
-                    # lacking
-                    errors.append((
-                        fpath,
-                        'line {0}'.format(i),
-                        line.strip(),
-                        'lacks {{ site.url }} prefix'))
-            elif line.count('<img'):
+            if line.count('<img'):
                 # html image
                 if line.count('<img') != line.count('site.url'):
                     errors.append((
