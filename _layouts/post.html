@@ -14,7 +14,8 @@ layout: default
 
 
   {% assign comments = site.data.comments[page.slug] %}
-  {% if comments.length %}
+
+  {% if comments %}
   <h2>Comments</h2>
 
   <div class="comments">
@@ -44,7 +45,7 @@ layout: default
         <label>Name:<br/><input name="fields[name]" type="text"></label>
       </div>
       <div>
-        <label>Email:<br/><input name="fields[email]" type="email"></label>
+        <label>Email (not displayed):<br/><input name="fields[email]" type="email"></label>
       </div>
       <div>
         <label>Message:</label>
