@@ -2,6 +2,7 @@
 layout: post
 title: "Over 50 Improvements in the Last Month"
 author: Matt
+tags: newsletter
 # image:
 excerpt_separator: <!--more-->
 ---

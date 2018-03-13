@@ -2,6 +2,7 @@
 layout: post
 title: 'Buckets is 50% Off until Jan 10th'
 author: Matt
+tags: newsletter
 image: /img/happynewyear2018/blankbook.jpg
 # excerpt_separator: <!--more-->
 ---

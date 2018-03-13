@@ -2,6 +2,7 @@
 layout: post
 title: Lower Price and New Domain
 author: Matt
+tags: newsletter
 # image:
 tags: feature
 ---
