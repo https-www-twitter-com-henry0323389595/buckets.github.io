@@ -2,7 +2,7 @@
 layout: post
 title: "Sometimes You Shouldn't Store Timestamps in UTC"
 author: Matt
-tags: newsletter
+tags: tech
 image: /img/always-store-utc/clocks.jpg
 excerpt_separator: <!--more-->
 ---
@@ -48,7 +48,7 @@ If I finished my March budget in Utah then moved to India "March" would go
 
 And there's the problem.  If my budget's transactions are all stored in UTC time, then when I move timezones, my completed "March" is different.  A few transactions might leak out one side and a few more could leak in the other side.
 
-So, the newest version of Buckets stores transaction posting dates in "local time" wherever that happens to be.  A transaction that happened on March 1st at midnight in Utah will still show as having happened March 1st at midnight in India.
+So, the [newest version of Buckets](https://www.budgetwithbuckets.com/) stores transaction posting dates in "local time" wherever that happens to be.  A transaction that happened on March 1st at midnight in Utah will still show as having happened March 1st at midnight in India.
 
 
 &mdash; Matt

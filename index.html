@@ -9,7 +9,11 @@ layout: default
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        <div class="post-excerpt">{{post.excerpt}}</div>
+        <div class="post-excerpt">
+          {% if post.tags contains "tech" %}
+            <div class="post-mini-tag tech">Tech post</div>
+          {% endif %}
+          {{post.excerpt}}</div>
       </li>
     {% endfor %}
   </ul>
