@@ -9,13 +9,13 @@ excerpt_separator: <!--more-->
 
 ![Clocks]({{ site.baseurl }}/img/always-store-utc/clocks.jpg)
 
-Most database guides recommend storing timestamps in the UTC timezone (search "store timestamp utc" for plenty of examples).  Doing so will let you compare timestamps easily, localize to a variety of locales and avoid (or at least delay) some of the headache that Daylight Saving can cause.
+A bug turned up in Buckets after this Daylight Saving weekend, and while fixing it, I realized that it was a mistake to store some particular timestamps in UTC.
+
+Most database guides recommend storing timestamps in the UTC timezone (search "store timestamp utc" for plenty of examples).  In general, this is the right advice.  Doing so will let you compare timestamps easily, localize to a variety of locales and avoid (or at least delay) some of the headache that Daylight Saving can cause.
+
+But here's one case where I ought to have thought more carefully about the data.
 
 <!--more-->
-
-Given this, I naturally chose to store timestamps in UTC for Buckets budget files (which are just [SQLite databases](/2017/11/02/sqlite.html)).
-
-However, this last weekend was Daylight Saving time.  And I've since realized there's at least one case where it's better to store timestamps in local times.
 
 ## Walled Months
 
@@ -26,29 +26,18 @@ Buckets is a monthly budgeting program.  You budget what you'll spend in a month
 - all expenses are recorded
 - everything is reconciled and the numbers all add up
 
-Everything has been going swimmingly, until this past weekend.  Monday, a user reported missing transactions and empty buckets.  No one likes having empty buckets.
+It's very nice at the end of March to say "I've completed my budget for March.  Yay!"
 
-After some digging and false starts on not-the-real-problem I realized the main problem with storing these particular dates in UTC&mdash;
+## But what is "March?"
 
-## What is a March?
+The definition of "March" depends where you live.  I live in [beautiful Utah](https://duckduckgo.com/?q=pictures+of+utah&t=hf&ia=images&iax=images), where "March" runs from March 1 at 7AM UTC to April 1 at 6AM UTC.  However, in India, "March" is from February 28 at 6:30pm UTC to March 31 at 6:30pm UTC.
 
-I have completed my budget for March. Yay!
+![March in various time zones]({{ site.baseurl }}/img/always-store-utc/march.png)
 
-But what is "March?"
+If I completed my March budget in Utah, then moved to India, suddenly, a transaction that happened Feb 28 at 10pm is included in my Indian March and a transaction that happened late in my Utah March is now part of Indian April.
 
-It depends where you live.  I live in beautiful Utah, where "March" runs
+So, to fix both some Daylight Saving bugs and to keep the definition of "March" consistent per user, the [newest version of Buckets](https://www.budgetwithbuckets.com/) stores transaction posting dates in "local time" wherever that happens to be.  However, Buckets still stores some timestamps in UTC time (e.g. database row creation times).
 
-- from March 1 at 7AM UTC
-- to April 1 at 6AM UTC
-
-If I finished my March budget in Utah then moved to India "March" would go
-
-- from February 28 at 6:30pm UTC
-- to March 31 at 6:30pm UTC
-
-And there's the problem.  If my budget's transactions are all stored in UTC time, then when I move timezones, my completed "March" is different.  A few transactions might leak out one side and a few more could leak in the other side.
-
-So, the [newest version of Buckets](https://www.budgetwithbuckets.com/) stores transaction posting dates in "local time" wherever that happens to be.  A transaction that happened on March 1st at midnight in Utah will still show as having happened March 1st at midnight in India.
-
+In conclusion, use recommendations but also break away from them when needed.
 
 &mdash; Matt

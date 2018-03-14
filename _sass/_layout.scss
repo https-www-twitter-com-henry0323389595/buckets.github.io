@@ -197,13 +197,16 @@ hr {
     overflow: hidden;
     display: flex;
     width: 100%;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
 
     .tag-name {
         padding: .5rem 1rem;
         flex-shrink: 0;
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .tag-description {
         padding: .5rem 1rem;
