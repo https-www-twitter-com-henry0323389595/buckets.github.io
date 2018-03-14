@@ -11,11 +11,11 @@ excerpt_separator: <!--more-->
 
 A bug turned up in Buckets after this Daylight Saving weekend, and while fixing it, I realized that it was a mistake to store some particular timestamps in UTC.
 
+<!--more-->
+
 Most database guides recommend storing timestamps in the UTC timezone (search "store timestamp utc" for plenty of examples).  In general, this is the right advice.  Doing so will let you compare timestamps easily, localize to a variety of locales and avoid (or at least delay) some of the headache that Daylight Saving can cause.
 
 But here's one case where I ought to have thought more carefully about the data.
-
-<!--more-->
 
 ## Walled Months
 
