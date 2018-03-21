@@ -8,6 +8,9 @@ fi
 
 FULLNAME="${NAME}.md"
 
+set -x
 cp _drafts/_blank.md _drafts/$FULLNAME
+mkdir img/${NAME}
+set +x
 
 subl _drafts/$FULLNAME
