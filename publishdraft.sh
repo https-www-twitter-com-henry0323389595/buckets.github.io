@@ -6,7 +6,7 @@ if [ -z "$FILENAME" ]; then
     exit 1
 fi
 
-POST_NAME="_posts/$(date +'%Y-%m-%d')-$(basename ${FILENAME}).md"
+POST_NAME="_posts/$(date +'%Y-%m-%d')-$(basename ${FILENAME})"
 echo "POST_NAME" $POST_NAME
 
 mv "$FILENAME" "$POST_NAME"
