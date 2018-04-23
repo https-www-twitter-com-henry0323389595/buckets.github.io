@@ -62,7 +62,7 @@ People like it.  In fact, complete strangers have paid for it.
 
 ## Future
 
-I enjoy working on Buckets, and foresee working on it for many years to come.
+I enjoy working on Buckets, and foresee working on it for many years to come.  Will Buckets make me a millionaire?  Nope, probably not&mdash;at least I don't expect it to.
 
 Where does Buckets go from here? Here's a high-level road map (subject to change and missing lots of detail, of course):
 
