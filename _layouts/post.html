@@ -23,7 +23,7 @@ layout: default
   <h2>Comments</h2>
 
   <div class="comments">
-  {% for comment in comments %}
+  {% for comment in comments reversed %}
     {% assign email = comment[1].email %}
     {% assign name = comment[1].name %}
     {% assign date = comment[1].date %}
