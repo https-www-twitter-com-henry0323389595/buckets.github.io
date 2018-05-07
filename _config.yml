@@ -3,7 +3,7 @@ title: Buckets Blog
 email: hello@budgetwithbuckets.com
 description: >
   A blog about budgeting with Buckets
-baseurl: ""
+baseurl: "https://blog.budgetwithbuckets.com"
 url: "https://blog.budgetwithbuckets.com"
 
 # Build settings
