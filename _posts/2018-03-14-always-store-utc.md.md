@@ -7,7 +7,7 @@ image: /img/always-store-utc/clocks.jpg
 excerpt_separator: <!--more-->
 ---
 
-![Clocks]({{ site.baseurl }}/img/always-store-utc/clocks.jpg)
+![Clocks]({{ site.url }}/img/always-store-utc/clocks.jpg)
 
 A bug turned up in Buckets after this Daylight Saving weekend, and while fixing it, I realized that it was a mistake to store some particular timestamps in UTC.
 
@@ -32,7 +32,7 @@ It's very nice at the end of March to say "I've completed my budget for March.  
 
 The definition of "March" depends where you live.  I live in [beautiful Utah](https://duckduckgo.com/?q=pictures+of+utah&t=hf&ia=images&iax=images), where "March" runs from March 1 at 7AM UTC to April 1 at 6AM UTC.  However, in India, "March" is from February 28 at 6:30pm UTC to March 31 at 6:30pm UTC.
 
-![March in various time zones]({{ site.baseurl }}/img/always-store-utc/march.png)
+![March in various time zones]({{ site.url }}/img/always-store-utc/march.png)
 
 If I completed my March budget in Utah, then moved to India, suddenly, a transaction that happened Feb 28 at 10pm is included in my Indian March and a transaction that happened late in my Utah March is now part of Indian April.
 

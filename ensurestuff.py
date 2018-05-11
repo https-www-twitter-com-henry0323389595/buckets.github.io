@@ -3,6 +3,9 @@ from __future__ import print_function
 
 import sys
 import os
+import re
+
+r_markdownimage = re.compile(r'!\[.*?\]\((.*?)\)')
 
 errors = []
 
@@ -15,6 +18,13 @@ for post in posts:
             if line.count('<img'):
                 # html image
                 if line.count('<img') != line.count('site.url'):
+                    errors.append((
+                        fpath,
+                        'line {0}'.format(i),
+                        'lacks {{ site.url }} prefix'))
+            m = r_markdownimage.findall(line)
+            for href in m:
+                if not href.count('site.url'):
                     errors.append((
                         fpath,
                         'line {0}'.format(i),

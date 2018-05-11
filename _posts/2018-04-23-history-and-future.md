@@ -9,7 +9,7 @@ excerpt_separator: <!--more-->
 
 I've stated that Buckets is a "keep-going" (not a start-up).  Let me explain.
 
-![map and compass]({{ site.baseurl }}/img/history-and-future/hero.jpg)
+![map and compass]({{ site.url }}/img/history-and-future/hero.jpg)
 
 <!--more-->
 

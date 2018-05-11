@@ -1,3 +1,2 @@
+bundle exec jekyll serve --draft --future
 
-
-bundle exec jekyll serve --future
