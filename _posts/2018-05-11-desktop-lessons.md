@@ -29,7 +29,7 @@ For bug reporting:
 
 - **Simplify**
 
-  In an earlier version, an unexpected error would prompt users with three options: report the error, ignore the error or chat with me about it.  Since cutting it down to just **report** and **ignore** the number of bug reports has increased.  I may further simplify the error form, too.
+  In an earlier version, errors would prompt users with three actions: report the error, ignore the error or chat with me about it.  Since cutting it down to just **report** and **ignore** the number of bug reports has increased.  I may further simplify the error form, too.
 
 ![Error form]({{site.url}}/img/desktop-lessons/error-prompt.png)
 
@@ -55,17 +55,15 @@ And I **love** it!
 
 ## Translations
 
-The value of internationalization (I18N) surprised me.  Early on in development, somewhat on a whim, I translated Buckets into Spanish.  I hesitated a bit because I knew it would increase the complexity of the application (potentially, by a lot).  But I'm glad I did.
+The value of internationalization (I18N) surprised me.  Early on in development, somewhat on a whim, I translated Buckets into Spanish.  I hesitated a bit because I knew it would increase the complexity of the application (potentially, by a lot).  But I'm glad I did, because it has made Buckets available to more people.
 
 - **International users**
 
-  Getting to interact with people who speak other languages is very fun for me.  And I've been pleasantly surprised by the [volunteer translators](https://github.com/buckets/translations#current-language-support) efforts.  But I hadn't considered how much I18N and L10N would increase Buckets' appeal.
+  Getting to interact with people who speak other languages is very fun for me (I'm kind of a language nerd).  And I've been pleasantly surprised by the [volunteer translators](https://github.com/buckets/translations#current-language-support) efforts.  But I hadn't considered how much I18N and L10N would increase Buckets' appeal.  There are people all over the world using Buckets.
 
 - **Forced simplicity**
 
-  Take a sentence like "You have 5 left."  Suppose the 5 might sometimes be 4, sometimes 1 and sometimes 0.  How do you translate that into Spanish?  What's the gender of the noun?  What are the variations in German?
-
-  Trying to handle all the variations forces me to be simpler in how I communicate.  Instead of writing out the sentence, I would just put an icon next to a 5.
+  Knowing that whatever I write will have to be translated forces me to be simpler in how I communicate.  Take a sentence like "You have 5 left."  Suppose the 5 might sometimes be 4, sometimes 1 and sometimes 0.  How do you translate that into Spanish?  What's the gender of the noun?  What are the variations in German?  Instead of attempting to deal with these possible problems, it's often easier to put an icon next to a 5.
 
 - **Do it early**
 
@@ -73,7 +71,7 @@ The value of internationalization (I18N) surprised me.  Early on in development,
 
 ### Translation technical details
 
-The localization module is homegrown and uses TypeScript to provide context to translators and ensure that translations aren't omitted (see below).  I can mark up strings in one of three ways (similar to gettext):
+The localization module is homegrown and uses TypeScript to provide context to translators and ensure that translations aren't omitted (see below).  I may later open source it if there's interest.  I can mark up strings in one of three ways (similar to gettext):
 
 1. Simple (for short strings)
     
@@ -95,13 +93,13 @@ The localization module is homegrown and uses TypeScript to provide context to t
     })
     ```
 
-Additional context can be put in a comment.   (Since comments are removed when compiling the TypeScript to JavaScript, in theory this reduces the app's file size and JavaScript loading time.  In practice, Buckets is an Electron app, so executable size is already ridiculous):
+Additional context can be put in a comment.   (Since comments are removed during compilation, *in theory* this reduces the app's file size and JavaScript loading time.  In *practice*, Buckets is an Electron app, so executable size is already ridiculous):
 
 ```typescript
 sss('Ugly'/* adjective referring to a boat */)
 ```
 
-Using TypeScript's compiler, message files [like these](https://github.com/buckets/translations/blob/master/langs/fr.tsx#L31) are extracted from the source.  Here's an example extracted message as would be given to a translator:
+Using TypeScript's compiler, message files [like these](https://github.com/buckets/translations/blob/master/langs/fr.tsx#L31) are extracted from the source.  Here's an example message as would be given to a translator:
 
 ```typescript
   "Animation": {
@@ -135,13 +133,22 @@ Buckets is an [Electron](https://electronjs.org) app.  I like Electron.  I've en
 
   Thanks to [electron-builder](https://electron.build), it's pretty easy to have an auto-updating app *that doesn't even require running another server.*  Check out [my most popular repo on GitHub :)](https://github.com/iffy/electron-updater-example)
 
-Electron justifiably has critics.  It consumes a good chunk of memory, can hog the CPU and application file sizes are large.  But the ease of use and familiar technologies win.  (I still haven't successfully made a Hello World in Qt)
+Electron justifiably has critics.  It consumes a good chunk of memory, can hog the CPU and application file sizes are large.  But the simple startup and familiar technologies win.  I'm always looking at [alternatives](https://docs.google.com/spreadsheets/d/1dTZIp6z2J1IL7YgBlHG_x68x0_zfecU0MTsjTXn1E3A/edit?usp=sharing), but I still haven't successfully launched a Qt application.
 
-That said, I'm always looking for [alternatives](https://docs.google.com/spreadsheets/d/1dTZIp6z2J1IL7YgBlHG_x68x0_zfecU0MTsjTXn1E3A/edit?usp=sharing).
+### Challenge 
+
+In fact, I offer a challenge to every cross-platform app-making technology.  Provide a single GitHub repo that:
+
+- Launches a dev build of a Hello World app with a single command (e.g. `electron .`)
+- Builds a distributable version of the app with a single command (e.g. `electron-builder -mwl`)
+- Auto-updates from GitHub (or an HTTP server)
+- Is code signed
 
 ## Would do it again
 
-Moving to a desktop app was the right move for Buckets.  Maybe it's the right move for your app?  And if you're looking for a great, private app for budgeting, give [Buckets](https://www.budgetwithbuckets.com) a try.
+Moving to a desktop app was the right move for Buckets.  Maybe it's the right move for your app?
+
+(And if you're looking for a budgeting app, give [Buckets](https://www.budgetwithbuckets.com) a try)
 
 
 &mdash; Matt
