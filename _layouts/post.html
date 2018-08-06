@@ -16,12 +16,33 @@ layout: default
     {{ content }}
   </article>
 
+  <div class="next-prev-links">
+    {%- if page.previous.url -%}
+    <a class="prev" href="{{ page.previous.url }}">
+      <div class="arrow">&larr;</div>
+      <div class="text">
+        <div class="title">{{page.previous.title}}</div>
+        <div class="date">{{ page.previous.date | date: "%b %-d, %Y" }}</div>
+      </div>
+    </a>
+    {%- endif -%}
+    {%- if page.next.url -%}
+    <a class="next" href="{{ page.next.url }}">
+      <div class="text">
+        <div class="title">{{page.next.title}}</div>
+        <div class="date">{{ page.next.date | date: "%b %-d, %Y" }}</div>
+      </div>
+      <div class="arrow">&rarr;</div>
+    </a>
+    {%- endif -%}
+  </div>
 
   {% assign comments = site.data.comments[page.slug] %}
 
   {% if comments %}
-  {% assign comments = comments | sort %}
   <h2>Comments</h2>
+  {% assign comments = comments | sort %}
+  
 
   <div class="comments">
   {% for comment in comments %}
@@ -32,6 +53,7 @@ layout: default
     {% include comment.html index=forloop.index email=email name=name date=date message=message %}
   {% endfor %}
   </div>
+  {% else %}
   {% endif %}
 
   <div class="comment-form">
@@ -41,7 +63,6 @@ layout: default
         document.write(`<div class="notification">Comment submitted!  Your comment will be posted here after being reviewed.</div>`);
       }
     </script>
-    <h3>Add comment</h3>
     <form method="POST" action="https://api.staticman.net/v2/entry/buckets/buckets.github.io/master/comments">
       <input name="options[redirect]" type="hidden" value="{{ site.url }}{{ page.url }}?comment=submitted#comment-form">
       <input name="options[slug]" type="hidden" value="{{ page.slug }}">
