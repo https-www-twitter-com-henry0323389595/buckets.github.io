@@ -8,12 +8,14 @@ layout: default
     {% for post in site.posts %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a class="post-link{% if forloop.index >= 10 %} old{% endif %}" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        {% if forloop.index < 10 %}
         <div class="post-excerpt">
           {% if post.tags contains "tech" %}
             <div class="post-mini-tag tech">Tech post</div>
           {% endif %}
           {{post.excerpt}}</div>
+        {% endif %}
       </li>
     {% endfor %}
   </ul>

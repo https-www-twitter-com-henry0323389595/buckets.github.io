@@ -256,6 +256,9 @@ hr {
     border-left: 1px solid $grey-color-light;
     padding-bottom: 1rem;
 }
+.post-link.old {
+    font-size: 18px;
+}
 
 .post-excerpt {
     flex-grow: 1;
