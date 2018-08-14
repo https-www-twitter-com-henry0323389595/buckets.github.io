@@ -1,0 +1,9 @@
+_id: fd81cab0-a011-11e8-999e-0f70a11211dd
+name: Matt
+email: 3a760317157c33e6b977df8e35ae857d
+message: >-
+  Neik, I haven't completely worked out how the syncing will work, though
+  ideally I'd love to do something peer-to-peer (and perhaps only use a server
+  for relaying in the case where direct access is unavailable) but as a starting
+  point it might be "bring your own."
+date: 1534285976
