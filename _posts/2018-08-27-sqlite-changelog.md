@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Implementing a Change Log with SQLite
+title: JSON Changelog with SQLite
 author: Matt
 tags: tech
 # image:
