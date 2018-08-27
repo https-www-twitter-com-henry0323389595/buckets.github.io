@@ -9,6 +9,8 @@ excerpt_separator: <!--more-->
 
 Sometimes you want a log of all changes to the data in your database (every INSERT, UPDATE and DELETE).  In Buckets' case, such a log will be used to help merge budget files between computers/phones.
 
+<!--more-->
+
 In this post, I'll show you one method for adding change tracking to your SQLite database.  Someone has probably already done it this way, but I couldn't find it.
 
 ## Do you need it?
