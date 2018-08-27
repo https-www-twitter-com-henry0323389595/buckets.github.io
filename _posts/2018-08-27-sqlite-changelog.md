@@ -7,13 +7,9 @@ tags: tech
 excerpt_separator: <!--more-->
 ---
 
-Sometimes you want a log of all changes to the data in your database (every INSERT, UPDATE and DELETE).  In Buckets' case, such a log is used to help merge budget files.
+Sometimes you want a log of all changes to the data in your database (every INSERT, UPDATE and DELETE).  In Buckets' case, such a log will be used to help merge budget files between computers/phones.
 
-In this post, I'll show you how to add change tracking to your SQLite database in a manner that is superior to every other method I've seen online.
-
-<!--more-->
-
-I'm not saying *I'm* superior; this *method* is.  Also, someone has probably already done this and I just couldn't find it.
+In this post, I'll show you one method for adding change tracking to your SQLite database.  Someone has probably already done it this way, but I couldn't find it.
 
 ## Do you need it?
 
@@ -34,118 +30,9 @@ CREATE TABLE people (
 );
 ```
 
-## Some Okay Options
-
-Searching online, most approaches to this problem do one of the following.  There are variations of each these.  Also, I'm intentionally not showing all the triggers required to make these work for the sake of brevity.
-
-### A) Log Columns
-
-One method has you log each column's changes individually.  Such a table might look like this:
-
-```sql
-CREATE TABLE column_log (
-    id INTEGER PRIMARY KEY,
-    ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    table_name TEXT,
-    column_name TEXT,
-    oldval TEXT,
-    newval TEXT
-);
-```
-
-Pros:
-
-- Highly granular
-- Records only columns that changed
-
-Cons:
-
-- Creates lots of rows
-- You lose type info
-- A single UPDATE/INSERT is broken up into many rows (which may be cumbersome to reconstruct)
-
-### B) Custom Log Tables
-
-This method requires that you create a log table per data table and keep the schema in sync.  Something like:
-
-```sql
-CREATE TABLE people_log (
-    id INTEGER PRIMARY KEY,
-    ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    old_id INTEGER,
-    new_id INTEGER,
-    old_created TIMESTAMP,
-    new_created TIMESTAMP,
-    old_name TEXT,
-    new_name TEXT,
-    old_age TEXT,
-    new_age TEXT
-);
-```
-
-Pros:
-
-- Your change log entry's schema will always match your data's schema.
-
-
-Cons:
-
-- You have to remember to update the log table's schema.
-- Double the number of tables
-
-### C) Store SQL
-
-You could store the SQL used to make each change (or unmake it, if you prefer), similar to the Undo/Redo technique described [here](https://www.sqlite.org/undoredo.html).  Buckets uses a version of this method for its undo/redo feature.
-
-```sql
-CREATE TABLE change_log_sql (
-    id INTEGER PRIMARY KEY,
-    ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    action TEXT
-);
-
--- Inserts
-CREATE TRIGGER people_insert
-AFTER INSERT ON people
-BEGIN
-    INSERT INTO change_log_sql (action)
-    VALUES ('INSERT INTO people(id,created,name,age)
-        VALUES(
-            '||quote(NEW.id)||',
-            '||quote(NEW.created)||',
-            '||quote(NEW.name)||',
-            '||quote(NEW.age)||')');
-END;
-
--- Updates
-CREATE TRIGGER people_update
-AFTER UPDATE ON people
-BEGIN
-    INSERT INTO change_log_sql (action)
-    VALUES ('UPDATE people SET
-        id='||quote(NEW.id)||',
-        created='||quote(NEW.created)||',
-        name='||quote(NEW.name)||',
-        age='||quote(NEW.age)||' WHERE id='||quote(OLD.id));
-END;
-
--- and similarly for deletes...
-```
-
-Pros:
-
-- You could easily replay these.
-- Type information is preserved.
-
-Cons:
-
-- You have to parse SQL to do anything other than replay.
-
----
-
 ## SQLite + JSON
 
-SQLite includes some [nice JSON functions](https://www.sqlite.org/json1.html).  Before showing you how to use them to make a change log, here's how each function works on its own:
+SQLite includes some [nice JSON functions](https://www.sqlite.org/json1.html).  Before showing you how to use them to make a change log, here's how some of the functions work on their own:
 
 ### json_array
 
@@ -193,7 +80,7 @@ key         value       type        atom        id          parent      fullkey 
 
 ## JSON Change Logs
 
-Using the above functions, you can make change logs.
+Using the above functions, you can make change logs!
 
 ### Version 1 - Track Everything
 
@@ -321,7 +208,7 @@ id   created     action      table_name  obj_id  changes
 
 ### Version 2 - Only Track Changes
 
-There's a lot of duplicate information in the above version (for instance, the created timestamp never changes after INSERT but it recorded twice for every UPDATE).  This version improves on the other by only recording values that have changed.
+There's a lot of duplicate information in the above version (for instance, the created timestamp never changes after INSERT but is recorded twice for every UPDATE).  This version improves on the other by only recording values that have changed.
 
 ```sql
 -- Data table
