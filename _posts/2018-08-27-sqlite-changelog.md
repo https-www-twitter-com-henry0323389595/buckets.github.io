@@ -557,6 +557,17 @@ id   created     action      table_name  obj_id  oldvals
 6    2018-08-27  DELETE      people      2       {"id":2,"created":"2018-08-27 21:53:53","name":"Bob","age":44}                  
 ```
 
+You can also query the changelog using JSON functions.  Here's every change involving the `age` field:
+
+```
+sqlite> SELECT * FROM change_log WHERE json_type(oldvals, '$.age') IS NOT NULL;
+id   created     action      table_name  obj_id  oldvals                                                                         
+---  ----------  ----------  ----------  ------  --------------------------------------------------------------------------------
+3    2018-08-27  UPDATE      people      1       {"age":30}                                                                      
+4    2018-08-27  UPDATE      people      2       {"age":42}                                                                      
+6    2018-08-27  DELETE      people      2       {"id":2,"created":"2018-08-27 22:02:23","name":"Bob","age":44}                  
+```
+
 ## Using sqlite_master and table_info
 
 To make sure I never miss a column, I use `sqlite_master` and `PRAGMA table_info(TABLENAME)` to generate the trigger SQL as in this pseudo code:
