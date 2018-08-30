@@ -56,34 +56,74 @@ layout: default
   {% else %}
   {% endif %}
 
-  <div class="comment-form">
+  <div id="comment-form" class="comment-form" style="display: none;">
     <a name="comment-form"></a>
     <script>
       if (window.location.search.substr(1).indexOf('comment=submitted') !== -1) {
         document.write(`<div class="notification">Comment submitted!  Your comment will be posted here after being reviewed.</div>`);
       }
     </script>
-    <form method="POST" action="https://api.staticman.net/v2/entry/buckets/buckets.github.io/master/comments">
-      <input name="options[redirect]" type="hidden" value="{{ site.url }}{{ page.url }}?comment=submitted#comment-form">
-      <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+    <script>
+      function setCommentStatus(text, className) {
+        const elem = document.getElementById('comment-notification');
+        elem.innerText = text;
+        elem.setAttribute('class', className);
+        elem.setAttribute('style', '');
+      }
+      function submitComment(event) {
+        const button_el = document.getElementById('comment-submit');
+        button_el.disabled = true;
+        setCommentStatus('Submitting...', 'notification');
+        event.preventDefault();
+        const message = document.getElementById('comment-message').value;
+        const email = document.getElementById('comment-email').value;
+        const name = document.getElementById('comment-name').value;
+        const slug = document.getElementById('comment-slug').value;
+        const comment = {
+          comment: message,
+          email,
+          name,
+          subdir: slug,
+        }
+        let request = new XMLHttpRequest();
+        request.addEventListener('load', ev => {
+          setCommentStatus('Comment submitted!  Your comment will be posted here after being reviewed.', 'notification')
+          button_el.disabled = false;
+        });
+        request.addEventListener('error', ev => {
+          console.log('Error', ev);
+          setCommentStatus('Error submitting comment.  If it continues not to work, please email us.', 'notification error')
+          button_el.disabled = false;
+        })
+
+        request.open('POST', 'https://7nd5a97217.execute-api.us-east-1.amazonaws.com/default/GitHubJekyllComments');
+        request.send(JSON.stringify(comment));
+      }
+      if (XMLHttpRequest) {
+        document.getElementById('comment-form').setAttribute('style', '');
+      }
+    </script>
+    <form method="POST" onsubmit="submitComment(event); return false;">
+      <input type="hidden" id="comment-slug" value="{{ page.slug }}">
 
       <div>
-        <label>Name:<br/><input name="fields[name]" type="text"></label>
+        <label>Name:<br/><input id="comment-name" type="text"></label>
       </div>
       <div>
-        <label>Email (not displayed):<br/><input name="fields[email]" type="email"></label>
+        <label>Email (optional&mdash;not displayed):<br/><input id="comment-email" type="email"></label>
       </div>
       <div>
         <label>Message:</label>
         <div>
-          <textarea name="fields[message]"></textarea>
+          <textarea id="comment-message"></textarea>
         </div>
       </div>
 
       <div>
-        <button type="submit">Add comment</button>
+        <button type="submit" id="comment-submit">Add comment</button>
       </div>
         
     </form>
+    <div id="comment-notification" style="display: none;"></div>
   </div>
 </div>

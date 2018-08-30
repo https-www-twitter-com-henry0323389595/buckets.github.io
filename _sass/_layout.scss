@@ -430,6 +430,9 @@ table.full-width {
         padding: 1rem;
         margin: 1rem 0;
         background-color: rgba(52, 152, 219, 0.3);
+        &.error {
+            background-color: rgba(231, 76, 60, 0.3);
+        }
     }
 }
 figure {
