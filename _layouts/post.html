@@ -49,7 +49,7 @@ layout: default
     {% assign email = comment[1].email %}
     {% assign name = comment[1].name %}
     {% assign date = comment[1].date %}
-    {% assign message = comment[1].message %}
+    {% assign message = comment[1].comment %}
     {% include comment.html index=forloop.index email=email name=name date=date message=message %}
   {% endfor %}
   </div>

@@ -1,5 +1,5 @@
 _id: 25c9ebe0-ab9f-11e8-b6e7-61e1106727d7
 name: Matt
 email: 3a760317157c33e6b977df8e35ae857d
-message: "Thales,\r\n\r\nYes, you can bind values into the JSON function.  For instance (this is python):\r\n\r\n>>> import sqlite3\r\n>>> db = sqlite3.connect(':memory:')\r\n>>> db.execute('SELECT json_array(?, ?, ?)', ('foo', 123, True)).fetchone()\r\n(u'[\"foo\",123,1]',)\r\n\r\nAlec,\r\n\r\nVery cool!  I had not seen that before."
-date: 1535556066
+comment: "Thales,\r\n\r\nYes, you can bind values into the JSON function.  For instance (this is python):\r\n\r\n>>> import sqlite3\r\n>>> db = sqlite3.connect(':memory:')\r\n>>> db.execute('SELECT json_array(?, ?, ?)', ('foo', 123, True)).fetchone()\r\n(u'[\"foo\",123,1]',)\r\n\r\nAlec,\r\n\r\nVery cool!  I had not seen that before."
+date: 1535556066000
