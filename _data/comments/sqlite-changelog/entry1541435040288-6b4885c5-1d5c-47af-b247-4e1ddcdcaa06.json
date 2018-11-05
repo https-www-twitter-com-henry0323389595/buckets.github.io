@@ -1,0 +1,8 @@
+{
+  "comment": "DD,\n\nI haven't evaluated performance much (because Buckets is much more read-intensive than write intensive).  But I threw a play benchmark together that shows there is *some* overhead:\n\nhttps://gist.github.com/iffy/c8ca8a852c0bd4e35dc027f7cb39f762",
+  "email": "3a760317157c33e6b977df8e35ae857d",
+  "name": "Matt",
+  "subdir": "sqlite-changelog",
+  "_id": "1541435040288-6b4885c5-1d5c-47af-b247-4e1ddcdcaa06",
+  "date": 1541435040288
+}
