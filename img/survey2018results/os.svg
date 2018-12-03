@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg width="808" height="400"><defs></defs><rect x="2" y="2" width="805" height="397" fill="none" style="stroke: rgb(2, 111, 193); fill-opacity: 1; stroke-opacity: 1; stroke-width: 2;"></rect><text style="font-size:10px;font-family:'Arial', sans-serif" fill="#000000" class="vennchart-title" x="404" y="5"></text><text style="font-size:10px;font-family:'Arial', sans-serif" fill="#000000" class="vennchart-subtitle" x="404" y="10"></text><g class="venn-area venn-circle venn-sets-2"><path style="fill-opacity: 0.25; fill: rgb(44, 160, 44); stroke-opacity: 0; stroke: red; stroke-width: 0;" d="
+M 399.1797717633788 206 
+m -165.21030368728353 0 
+a 165.21030368728353 165.21030368728353 0 1 0 330.42060737456706 0 
+a 165.21030368728353 165.21030368728353 0 1 0 -330.42060737456706 0"></path><text style="fill: rgb(44, 160, 44);" text-anchor="middle" dy=".35em" x="368" y="206"><tspan x="368" y="206" dy="0.35em">Windows</tspan></text></g><g class="venn-area venn-circle venn-sets-1"><path style="fill-opacity: 0.25; fill: rgb(255, 127, 14); stroke-opacity: 0; stroke: red; stroke-width: 0;" d="
+M 183.10505409505294 206 
+m -126.7105187249881 0 
+a 126.7105187249881 126.7105187249881 0 1 0 253.4210374499762 0 
+a 126.7105187249881 126.7105187249881 0 1 0 -253.4210374499762 0"></path><text style="fill: rgb(255, 127, 14);" text-anchor="middle" dy=".35em" x="162" y="204"><tspan x="162" y="204" dy="0.35em">Linux</tspan></text></g><g class="venn-area venn-circle venn-sets-0"><path style="fill-opacity: 0.25; fill: rgb(31, 119, 180); stroke-opacity: 0; stroke: red; stroke-width: 0;" d="
+M 581.6054646299351 206 
+m -170 0 
+a 170 170 0 1 0 340 0 
+a 170 170 0 1 0 -340 0"></path><text style="fill: rgb(31, 119, 180);" text-anchor="middle" dy=".35em" x="627" y="206"><tspan x="627" y="206" dy="0.35em">macOS</tspan></text></g><g class="venn-area venn-intersection venn-sets-0_2"><path style="fill-opacity: 0; stroke-opacity: 0; stroke: red; stroke-width: 0;" d="
+M 485.99204410447027 346.5634156365753 
+A 170 170 0 0 1 485.99204410447027 65.43658436342471 
+A 165.21030368728353 165.21030368728353 0 0 1 485.99204410447027 346.5634156365753"></path></g><g class="venn-area venn-intersection venn-sets-1_2"><path style="fill-opacity: 0; stroke-opacity: 0; stroke: red; stroke-width: 0;" d="
+M 265.1354626247834 302.57415612885825 
+A 165.21030368728353 165.21030368728353 0 0 1 265.1354626247834 109.42584387114172 
+A 126.7105187249881 126.7105187249881 0 0 1 265.1354626247834 302.57415612885825"></path></g><g class="venn-area venn-intersection venn-sets-0_1"><path style="fill-opacity: 0; stroke-opacity: 0; stroke: red; stroke-width: 0;" d="M 0 0"></path></g><g class="venn-area venn-intersection venn-sets-0_1_2"><path style="fill-opacity: 0; stroke-opacity: 0; stroke: red; stroke-width: 0;" d="M 0 0"></path></g></svg>
