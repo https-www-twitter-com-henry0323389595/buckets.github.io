@@ -1,0 +1,8 @@
+{
+  "comment": "I'm curious, have you evaluated the performance cost of doing this?\n\nI'm guessing it might not matter in your case. FWIW, I find your technique\nreally interesting and creative, thanks for sharing (discovered it via a question\non SQLite's ML BTW), but I'm curious (worried?) about its potential slowdown.",
+  "email": null,
+  "name": "DD",
+  "subdir": "sqlite-changelog",
+  "_id": "1541235556371-2b8e70b2-af2a-42e6-a425-a86c499b33af",
+  "date": 1541235556371
+}
