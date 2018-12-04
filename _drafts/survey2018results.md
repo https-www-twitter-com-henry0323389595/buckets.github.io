@@ -17,11 +17,11 @@ Thank you to everyone who filled out the first annual Buckets Community Survey! 
 const COLORS = ['#88BF60', '#5BB2D6', '#EA7FA1', '#EEA64C', '#B3B848', '#5AC181', '#EE7C6C', '#C8B344', '#92A4D9', '#77ABDA', '#42C193', '#AA9CD4', '#24BBC3', '#1ABEB5', '#FDA057', '#D28CC0', '#2AC0A5', '#F07C8F', '#F17B7D', '#DCAD45', '#E085B1', '#3EB7CE', '#71C070', '#9EBC52', '#C094CC']
 </script>
 
-## You
+## Hello!
 
 Buckets users come from all over the world!  Ahoj, Bonjour, Ciao, Cześć, Dia dhuit, Hallo, Hello, Hola, Kumusta, Namaste, Oi, Olá, Salut, Xin chao, Zdravo to all of you!
 
-### Country
+## Countries
 
 <canvas id="countryChart"></canvas>
 
@@ -45,7 +45,7 @@ var countryChart = new Chart(ctx, {
 });
 </script>
 
-### Operating System
+## Operating Systems
 
 <img src="{{ site.url }}/img/survey2018results/os.png">
 
@@ -56,7 +56,7 @@ var countryChart = new Chart(ctx, {
 - Linux + Windows: 2
 - macOS + Windows + Linux: 2
 
-### Trial vs Paid
+## Trial vs Paid
 
 <canvas id="paidChart"></canvas>
 
@@ -80,14 +80,14 @@ var paidChart = new Chart(ctx, {
 
 This only includes responses for those who use Buckets.  Although it would be generous, I'm not expecting people to pay for Buckets if they don't use it :wink:
 
-### Profession
+## Professions
 
 Although professions are varied, most Buckets users do computery work.  Here's the full list:
 
 Architecture, Bank officer, Consultant, Control Analyst, CTO, Developer, Digital Consultant, Engineer, Event Planner, Full time mom, Graduate Student, Graphic Designer, IT, Marketer , Office guy, Physician, Product Manager, Project Admin, Public Transport, Realty Specialist , Retired, Small Business Owner, Software QA, Student, System Analyst, Tax consultant, Teacher, UX designer
 
 
-### Age
+## Age
 
 <canvas id="ageChart"></canvas>
 
@@ -109,7 +109,7 @@ var ageChart = new Chart(ctx, {
 });
 </script>
 
-### What do you hope budgeting well will do for you?
+## What do you hope budgeting well will do for you?
 
 The top reasons:
 
@@ -120,7 +120,7 @@ The top reasons:
 5. (33%) Bring more harmony to my marriage/relationships
 6. (31%) Allow me to help more people
 
-### Proposed features
+## Proposed features
 
 Regarding some proposed features, here's what people want most according to the following admittedly arbitrarily-weighted scale.  Scores were a sum of the values from the following mapping:
 
@@ -134,16 +134,6 @@ I'm not surprised by the mobile apps scores, but I was surprised that *Encrypted
 
 <script>
 var ctx = document.getElementById('featuresChart').getContext('2d');
-// const totals = {
-//     'iOS app': 234,
-//     'Android app': 235,
-//     'Automatic categorization': 231,
-//     'Keyboard shortcuts': 202,
-//     'More bucket types': 183,
-//     'Encrypted budget files': 148,
-//     'Printable reports': 136,
-//     'Multiple currency support': 114,
-// }
 var featuresChart = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -174,7 +164,7 @@ var featuresChart = new Chart(ctx, {
 });
 </script>
 
-### How much should Buckets cost?
+## How much should Buckets cost?
 
 We asked this question because we've been wanting to raise the price.  Here are responses for various groups:
 
@@ -187,7 +177,7 @@ We asked this question because we've been wanting to raise the price.  Here are 
 
 Based on the results, we *will* be raising the price soon (we'll make an official announcement before that happens).
 
-### What's the best part about Buckets?
+## What's the best part about Buckets?
 
 Here are some representative comments:
 
@@ -199,9 +189,7 @@ Here are some representative comments:
 - "...plus scripted record pulling from my bank"
 - "Multiplatform yet private"
 
-### What is Buckets' greatest weakness?
-
-More representative comments plus some responses and links to issues (so you can know when these are addressed):
+## What is Buckets' greatest weakness?
 
 - "Lack of mobile app"
 - "No phone app"
@@ -227,7 +215,7 @@ Another one that was brought up a few times is the [bus factor](https://en.wikip
 
 But really, I will work on [getting a formal plan](https://github.com/buckets/application/issues/320) in place in case the bus and I do cross paths.  The likely outcome will be that Buckets will be open-sourced.  One nice thing about how Buckets works now, though, is that even if there were never any more updates, it would continue working as-is for a long time (until operating systems move out from under it).
 
-### Prove you're human
+## Prove you're human
 
 Most people got this question right.  13% didn't.  Here's the answer key:
 
@@ -238,7 +226,7 @@ Most people got this question right.  13% didn't.  Here's the answer key:
 
 ![Ducks and not]({{ site.url }}/img/survey2018results/ducks.png)
 
-### Have you recommended Buckets to anyone?
+## Have you recommended Buckets to anyone?
 
 Lastly, most of you have recommended Buckets to others.  Thank you!
 
@@ -263,9 +251,10 @@ var shareChart = new Chart(ctx, {
 });
 </script>
 
----
 
-It has been a great year for Buckets, thanks to all of you!  And as 2019 approaches, I'm excited about where Buckets is going to go.
+## Thank you!
+
+It has been a great year for Buckets, thanks to all of you!  And as 2019 approaches I'm excited about where Buckets is going to go.
 
 Thanks and happy budgeting!
 
