@@ -447,3 +447,23 @@ figure {
 
     }
 }
+
+table {
+    width: 100%;
+    margin-bottom: 2rem;
+    border-collapse: collapse;
+    th, td {
+        padding: .25rem .5rem;
+        img.emoji {
+            height: 1rem;
+            width: 1rem;
+        }
+    }
+    th {
+        border-bottom: 1px solid $grey-color-dark;
+        text-align: left;
+    }
+    td {
+        border-bottom: 1px solid $grey-color;
+    }
+}
