@@ -1,0 +1,8 @@
+{
+  "comment": "I've done some Cordova aka PhoneGap for a project. If you can do it in 100% JS it works pretty great. As soon as you start linking up with native libraries that are even a tiny bit different across iOS and Android, you end up having to build wrappers around the libraries on both platforms and lose the \"one codebase for two platforms\" advantage. I'd look into it for Buckets since I'm pretty sure sqlite will be cross-platform friendly.",
+  "email": "58d13dd43e911c3a0e72f15d87a571b0",
+  "name": "Kenny D",
+  "subdir": "making-an-app-2018",
+  "_id": "1544938725457-48abdd27-5cae-4210-85ff-1ab6d057620b",
+  "date": 1544938725457
+}
