@@ -7,7 +7,7 @@ image: /img/new-policies-2019/documents.jpg
 # excerpt_separator: <!--more-->
 ---
 
-Hi everyone!  Buckets will soon have a new Privacy Policy and End-User License Agreement (EULA), and we wanted to give you a chance to give feedback before it goes live.
+Hi everyone!  Buckets will soon have a new Privacy Policy and End-User License Agreement (EULA), and we wanted to let you give feedback before it goes live.
 
 ![Photo by Patrick Tomasso on Unsplash]({{site.url}}/img/new-policies-2019/documents.jpg)
 
