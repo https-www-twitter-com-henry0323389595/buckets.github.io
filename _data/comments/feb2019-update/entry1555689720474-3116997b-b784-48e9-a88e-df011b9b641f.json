@@ -1,0 +1,8 @@
+{
+  "comment": "Looking forward to both the mobile app and the bug squashing.  Using Buckets for less than a month, I've noticed a couple things with transfers that might be considered bugs, or might not depending on the vision for the program:\n\n1.  When I enter a transfer, it creates two transactions that are not linked.  If I see that I had a typo in the amount, I need to edit both transactions to fix it.\n\n2.  If I'm in the April register and enter a transfer for May 1 (scheduled payment of my credit card, in this case), the transaction is created on May 1 in the account where I enter it; but it shows up on the current date in the other account.  This can be prevented by entering the transfer in the May register; but having separate registers by month is new to me so I didn't predict this.",
+  "email": "61a3cfc362f7096a13b23224423382a5",
+  "name": "Kevin",
+  "subdir": "feb2019-update",
+  "_id": "1555689720474-3116997b-b784-48e9-a88e-df011b9b641f",
+  "date": 1555689720474
+}
