@@ -34,7 +34,7 @@ Buckets Mobile has been a *long* time coming because it involves two tricky prob
 
 **First, making a mobile app.**  This is my first mobile app and the mobile app development process is [kind of messy](/2018/12/13/making-an-app-2018.html), *especially* if you want to make your code work on iOS, Android, macOS, Windows and Linux.
 
-**Second, making a secure, reliable and *private* way to sync data between your devices.**  If Buckets stored your information in the cloud, this would be trivial.  But because Buckets is committed to privacy, your data resides only on your devices and we can't access it.  Any synchronization solution will have to be completely private as well.  I'm happy to release software early and often even if it's buggy (as you've no-doubt noticed), but I'm unwilling to release a potentially insecure app just to get it out sooner.
+**Second, making a secure, reliable and *private* way to sync data between your devices.**  If Buckets stored your information in the cloud, this would be trivial.  But because Buckets is committed to privacy, your data resides only on your devices and we can't access it.  Any synchronization solution will have to be completely private as well.  I'm happy to release software early and often even if it's clunky (as you've no-doubt noticed), but I'm unwilling to release a potentially insecure app just to get it out sooner.
 
 To that end, here is the current roadmap complete with pretty arrows and icons:
 
