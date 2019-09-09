@@ -1,0 +1,8 @@
+{
+  "comment": "That’s great, I’ll be glad to try and help these beta mobile versions.\nWill also an iPad / tablet app be available ?\nI’m not sure to understand why you want to build a custom made sync relay server while some web standards, such as WebDAV, already exist ? If you make an open source server, please don’t make it only docker... I would like to be able to create a Yunohost version",
+  "email": null,
+  "name": "Arnaud",
+  "subdir": "mobile-update-sep2019",
+  "_id": "1568042542158-117e7fcb-3ec6-493c-83f4-481908c14223",
+  "date": 1568042542158
+}
