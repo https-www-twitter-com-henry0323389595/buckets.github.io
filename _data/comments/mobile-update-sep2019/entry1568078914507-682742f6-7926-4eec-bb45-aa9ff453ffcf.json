@@ -1,0 +1,8 @@
+{
+  "comment": "Arnaud,\n\nI'm not directly targeting tablets at this point, but you're welcome to test on them and give feedback.\n\nRegarding the relay server, I will absolutely use an off-the-shelf one that can provide the features Buckets needs.  Also, since budgets will still just be files, you'll be free to move them about however you'd like.  The protocol I'm thinking of will not be a client-server model, but peer-to-peer.  The cloud-based server won't store your budget, just pass it along.\n\nIf I do have to make my own, it will likely be one of Python, NodeJS or a pre-compiled binary (with instructions for compiling if you want to build your own).  It will be portable and not just Docker-only.\n\nHopefully this is encouraging!",
+  "email": "3a760317157c33e6b977df8e35ae857d",
+  "name": "Matt",
+  "subdir": "mobile-update-sep2019",
+  "_id": "1568078914507-682742f6-7926-4eec-bb45-aa9ff453ffcf",
+  "date": 1568078914507
+}
