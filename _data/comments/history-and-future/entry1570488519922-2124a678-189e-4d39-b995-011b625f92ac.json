@@ -1,0 +1,8 @@
+{
+  "comment": "Hi Matt,\n\nyour application looks nice - I just imported everything from YNAB4 :)\n\nIt worked ok in general, with just a few issues:\n-All transfers were \"uncategorized\" and I had to manually set them up as \"transfer\".\n-A few split transactions got lost. I think it was related to moving money between buckets in YNAB by having a split transaction outgoing from bucket A, incoming to bucket B. (Which is not how it should be done anyway)\n\nFeedback:\n-I'm missing the \"Payee\" column, which auto-filled the category/bucket. Not a big deal I guess, since it was mostly for analysis / searching.\n-\"Search\" seems to ignore the amount column? (Workaround is using CTRL+F inside transaction view, but this only works month-by-month\n\nMy biggest issue right now is the same as TR postet:\n-I cannot shedule recurring transactions. This was really helpful as a reminder, and not having to write everything again manually each month / 3 month / year.\n\nGreetings,\nFrostregen",
+  "email": "15bed9f02fc6a5099f5c3169acfd4257",
+  "name": "Frostregen",
+  "subdir": "history-and-future",
+  "_id": "1570488519922-2124a678-189e-4d39-b995-011b625f92ac",
+  "date": 1570488519922
+}
