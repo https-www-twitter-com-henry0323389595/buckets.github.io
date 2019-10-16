@@ -1,0 +1,8 @@
+{
+  "comment": "In my experience the best way currently is to go with cordova and do the javascript part with a decent language and framework - options are Haxe/coconut or nim/karax - a nice JavaScript framework for native look and feel is Framework7. \nHaxeUI is another option for desktop and Android, but no iOS (only via OpenFL).",
+  "email": null,
+  "name": "adrian",
+  "subdir": "making-an-app-2018",
+  "_id": "1571214724544-f260ee95-48c0-4b8d-a10a-6585fe107876",
+  "date": 1571214724544
+}
