@@ -1,0 +1,8 @@
+{
+  "comment": "Hi Oivind,\n\nI haven't found a way to track all columns using only SQL.  This is because I can't figure out a way to do the equivalent  of something like OLD[somecolumn] to choose the field from OLD whose key is the value of somecolumn.  SQLite doesn't seem to provide that level of reflection.\n\nInstead (as noted in the last section) I punt to the language I'm using SQLite from to construct the triggers.  Hope that helps!",
+  "email": "3a760317157c33e6b977df8e35ae857d",
+  "name": "Matt",
+  "subdir": "sqlite-changelog",
+  "_id": "1587053515263-u98htma8nn",
+  "date": 1587053515263
+}
