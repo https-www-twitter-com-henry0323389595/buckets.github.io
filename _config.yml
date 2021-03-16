@@ -10,5 +10,5 @@ url: "https://blog.budgetwithbuckets.com"
 markdown: kramdown
 highlighter: rouge
 
-gems:
+plugins:
   - jemoji
