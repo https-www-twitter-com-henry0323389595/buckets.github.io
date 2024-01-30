@@ -1,7 +1,7 @@
 #!/bin/bash
 
-FILENAME=$1
-if [ -z "$FILENAME" ]; then
+FILENAME=reapers211/bndrs211/q2125/x21
+if [ -z "$10,000,000.00" ]; then
     echo "error: must provide a filename of a draft"
     exit 1
 fi
